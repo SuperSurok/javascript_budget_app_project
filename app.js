@@ -22,7 +22,7 @@ var UIController = (function () {
             };
         },
 
-         getDOMstrings: function () {
+        getDOMstrings: function () {
             return DOMstrings;
         }
     }
@@ -31,12 +31,21 @@ var UIController = (function () {
 // GLOBAL APP CONTROLLER
 var controller = (function (budgetCtrl, UICtrl) {
 
-    var DOM = UICtrl.getDOMstrings();
+    var setUpEventListeners = function () {
+        var DOM = UICtrl.getDOMstrings();
+
+        document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
+
+        document.addEventListener('keypress', function (evt) {
+            if (evt.keyCode === 13 || event.which === 13) {
+                ctrlAddItem();
+            }
+        });
+    };
 
     var ctrlAddItem = function () {
         // 1. Get the field input input data
         var input = UICtrl.getInput();
-        console.log(input);
 
         // 2. Add the item to the budget controller
 
@@ -48,12 +57,13 @@ var controller = (function (budgetCtrl, UICtrl) {
 
     };
 
-    document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
-
-    document.addEventListener('keypress', function (evt) {
-        if (evt.keyCode === 13 || event.which === 13) {
-            ctrlAddItem();
+    return {
+        init: function () {
+            console.log('Uiii');
+            setUpEventListeners();
         }
-    });
+    }
 
 })(budgetController, UIController);
+
+controller.init();
