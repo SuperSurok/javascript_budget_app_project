@@ -113,6 +113,17 @@ var UIController = (function () {
 
         },
 
+        clearFields: function() {
+            var fields, arrayFields;
+
+            fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' +
+            DOMstrings.inputValue);
+
+            // Did the array from collection
+            arrayFields = Array.prototype.slice.call(fields);
+
+        },
+
         getDOMstrings: function () {
             return DOMstrings;
         }
