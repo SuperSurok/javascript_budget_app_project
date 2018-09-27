@@ -73,15 +73,15 @@ var UIController = (function () {
             return {
                 type: document.querySelector(DOMstrings.inputType).value, // Will be either inc or exp
                 description: document.querySelector(DOMstrings.inputDescription).value,
-                value: document.querySelector(DOMstrings.inputValue).value
+                value: parseFloat(document.querySelector(DOMstrings.inputValue).value)
             };
         },
 
-        addLsitItem: function(obj, type) {
+        addLsitItem: function (obj, type) {
             var html, newHtml, element;
             // Create HTML string with placeholder
 
-            if(type === 'inc') {
+            if (type === 'inc') {
                 element = DOMstrings.incomeContainer;
 
                 html = `<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div>
@@ -113,15 +113,20 @@ var UIController = (function () {
 
         },
 
-        clearFields: function() {
-            var fields, arrayFields;
+        clearFields: function () {
+            var fields, fieldsArray;
 
             fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' +
-            DOMstrings.inputValue);
+                DOMstrings.inputValue);
 
             // Did the array from collection
-            arrayFields = Array.prototype.slice.call(fields);
+            fieldsArray = Array.prototype.slice.call(fields);
 
+            fieldsArray.forEach(function (current, index, array) {
+                current.value = "";
+            });
+
+            fieldsArray[0].focus();
         },
 
         getDOMstrings: function () {
@@ -145,22 +150,35 @@ var controller = (function (budgetCtrl, UICtrl) {
         });
     };
 
+    var updateBudget = function () {
+
+        // 1. Calculate the budget
+
+        // 2. Return the budget
+
+        // 3. Display th budget on the UI
+
+    };
+
     var ctrlAddItem = function () {
         var input, newItem;
 
         // 1. Get the field input input data
         input = UICtrl.getInput();
 
-        // 2. Add the item to the budget controller
-        newItem = budgetCtrl.addItem(input.type, input.description, input.value);
+        if (input.description !== "" && !isNaN(input.value) && input.value > 0) {
+            // 2. Add the item to the budget controller
+            newItem = budgetCtrl.addItem(input.type, input.description, input.value);
 
-        // 3. Add the item to the UI
-        UICtrl.addLsitItem(newItem, input.type);
+            // 3. Add the item to the UI
+            UICtrl.addLsitItem(newItem, input.type);
 
-        // 4. Calculate the budget
+            // 4. Clear the fields
+            UICtrl.clearFields();
 
-        // 5. Display the budget on the UI
-
+            // 5. Calculate the budget and update budget
+            updateBudget();
+        }
     };
 
     return {
