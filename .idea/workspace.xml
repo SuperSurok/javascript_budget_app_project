@@ -44,14 +44,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="6117" />
-          <entry key="txt" value="443" />
+          <entry key="js" value="7097" />
+          <entry key="txt" value="499" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="6114" />
-          <entry key="PLAIN_TEXT" value="443" />
+          <entry key="JavaScript" value="7094" />
+          <entry key="PLAIN_TEXT" value="499" />
           <entry key="RegExp" value="3" />
         </counts>
       </usages-collector>
@@ -62,11 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="125" column="54" selection-start-line="125" selection-start-column="54" selection-end-line="125" selection-end-column="54" />
-              <folding>
-                <element signature="e#3950#5613#0" />
-              </folding>
+            <state relative-caret-position="502">
+              <caret line="267" column="106" selection-start-line="267" selection-start-column="106" selection-end-line="267" selection-end-column="106" />
             </state>
           </provider>
         </entry>
@@ -74,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="64" />
+            <state relative-caret-position="1263">
+              <caret line="95" column="45" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -86,6 +83,7 @@
     <findStrings>
       <find>calculateTotal</find>
       <find>getPercentages</find>
+      <find>proto</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,7 +168,7 @@
       <workItem from="1537900174810" duration="4824000" />
       <workItem from="1537994593912" duration="3897000" />
       <workItem from="1538164187445" duration="4567000" />
-      <workItem from="1538325297974" duration="3650000" />
+      <workItem from="1538325297974" duration="8287000" />
     </task>
     <task id="LOCAL-00001" summary="Reading input data.">
       <created>1537713939116</created>
@@ -256,11 +254,25 @@
       <option name="project" value="LOCAL" />
       <updated>1538331135205</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Updating the percentages budget controller">
+      <created>1538426846506</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1538426846506</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updating the percentages UI controller">
+      <created>1538512361875</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1538512361875</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26612000" />
+    <option name="totallyTimeSpent" value="31249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1280" height="1348" extended-state="0" />
@@ -304,14 +316,16 @@
     <MESSAGE value="Setting up the delete event listener using event delegation" />
     <MESSAGE value="Deleting an item from budget controller" />
     <MESSAGE value="Deleting an item from the UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleting an item from the UI" />
+    <MESSAGE value="Updating the percentages budget controller" />
+    <MESSAGE value="Updating the percentages UI controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating the percentages UI controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app.js</url>
-          <line>177</line>
+          <line>204</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -338,18 +352,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="64" />
+        <state relative-caret-position="1263">
+          <caret line="95" column="45" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="125" column="54" selection-start-line="125" selection-start-column="54" selection-end-line="125" selection-end-column="54" />
-          <folding>
-            <element signature="e#3950#5613#0" />
-          </folding>
+        <state relative-caret-position="502">
+          <caret line="267" column="106" selection-start-line="267" selection-start-column="106" selection-end-line="267" selection-end-column="106" />
         </state>
       </provider>
     </entry>
